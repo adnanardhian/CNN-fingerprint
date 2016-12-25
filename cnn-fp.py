@@ -16,6 +16,7 @@ batch_size = 10
 nb_classes = 2
 nb_epoch = 20
 
+# To make the data ready for CNN, pictures are named with indexes, like '1.jpg', '2.jpg', etc..
 def dir_to_dataset(mypath, loc_train_labels=""):
     dataset = []
     
@@ -37,7 +38,8 @@ def dir_to_dataset(mypath, loc_train_labels=""):
 
 if __name__ == '__main__':
     Data, y = dir_to_dataset("Fingerprint/20Nov/","Fingerprint/label20.csv")
-
+    
+    #Split the train set and validation set
     train_set_x = Data[:1000]
     val_set_x = Data[1000:]
     train_set_y = y[:1000]
@@ -54,6 +56,7 @@ if __name__ == '__main__':
     # convolution kernel size
     kernel_size = (3, 3)
 
+    # Checking if the backend is Theano or Tensorflow
     if K.image_dim_ordering() == 'th':
         X_train = X_train.reshape(X_train.shape[0], 1, img_rows, img_cols)
         X_test = X_test.reshape(X_test.shape[0], 1, img_rows, img_cols)
