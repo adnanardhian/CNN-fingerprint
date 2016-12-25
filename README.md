@@ -1,5 +1,5 @@
 # cnn-fingerprint
-fingerprint verification using convolution neural networks
+fingerprint verification using convolutional neural networks
 
 In this project, the architecture of the cnn is same as mnist handwritten digits architecture, also using keras library, with Theano as backend
 
