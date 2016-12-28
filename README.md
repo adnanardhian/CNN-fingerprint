@@ -1,4 +1,4 @@
-# cnn-fingerprint
+# CNN-fingerprint
 fingerprint verification using convolutional neural networks
 
 In this project, the architecture of the cnn is same as mnist handwritten digits architecture, thanks to
